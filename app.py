@@ -166,9 +166,10 @@ async def main(message: cl.Message):
 
 if __name__ == "__main__":
     import os
-    import chainlit.cli as cli
+    import subprocess
 
     os.environ["CHAINLIT_HOST"] = "0.0.0.0"
     os.environ["CHAINLIT_PORT"] = os.getenv("PORT", "8000")
 
-    cli.run(["run", "app.py"])
+    subprocess.run(["chainlit", "run", "app.py"])
+
