@@ -1,0 +1,6 @@
+textblob==0.18.0.post0
+nltk==3.9.1
+python-dotenv==1.0.1
+langchain==0.3.1
+chainlit==1.2.0
+httpx

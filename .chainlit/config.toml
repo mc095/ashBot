@@ -1,0 +1,119 @@
+[project]
+# Name of the project
+name = "Ashley - Your Mental Health Companion"
+
+# Project description shown on the welcome screen
+description = "Meet Ashley, your kawaii mental health buddy! Talk about your feelings, share your day, or just chat when you need a friend. Ashley is here to listen and support you with wholesome conversation and gentle encouragement."
+
+welcome_message = "./welcome.md"
+# Enable or disable telemetry (default: true)
+enable_telemetry = true
+
+# Tags for project organization and discovery
+tags = ["mental-health", "companion", "emotional-support", "kawaii"]
+
+# Duration (in seconds) during which the session is saved when the connection is lost
+session_timeout = 3600
+
+# Duration (in seconds) of the user session expiry
+user_session_timeout = 1296000  # 15 days
+
+# Enable third parties caching (e.g., LangChain cache)
+cache = false
+
+# Authorized origins
+allow_origins = ["*"]
+
+# List of environment variables to be provided by each user to use the app
+user_env = []
+
+[features]
+# Process and display HTML in messages
+unsafe_allow_html = true
+
+# Process and display mathematical expressions
+latex = false
+
+# Autoscroll new user messages at the top of the window
+user_message_autoscroll = true
+
+# Automatically tag threads with the current chat profile (if a chat profile is used)
+auto_tag_thread = true
+
+# Allow users to edit their own messages
+edit_message = true
+
+# Allow users to spontaneously upload files with messages
+[features.spontaneous_file_upload]
+    enabled = true
+    accept = ["*/*"]
+    max_files = 20
+    max_size_mb = 500
+
+[features.audio]
+    # Sample rate of the audio
+    sample_rate = 24000
+
+[features.mcp.sse]
+    enabled = true
+
+[features.mcp.stdio]
+    enabled = true
+    allowed_executables = [ "npx", "uvx" ]
+
+[UI]
+# Name displayed in the UI
+name = "Ashley"
+
+# Description displayed in the UI
+description = "Your Mental Health Bestie"
+
+# Set the default UI theme: "light" or "dark"
+default_theme = "dark"
+
+# Layout width
+layout = "default"
+
+# Default sidebar state
+default_sidebar_state = "closed"
+
+# Hide the chain of thought toggle
+cot = "hidden"
+
+# Specify a CSS file that can be used to customize the user interface
+custom_css = "/public/css/main.css"
+custom_font = "https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+custom_meta_image_url = "/public/images/login.jpg"
+
+# Custom login page image filter
+login_page_image_filter = "brightness-100"
+login_page_image_dark_filter = "brightness-100"
+
+[UI.custom_background]
+background_image_url = "https://www.byteside.com/content/images/wp-content/uploads/2020/09/karigurashi031.jpg"
+
+[meta]
+generated_by = "2.4.400"
+
+[auth]
+# Custom title for the login page
+login_title = "Login to Ashley"
+
+# Custom subtitle for the login page
+login_subtitle = "Your kawaii mental health companion"
+
+# Whether login is required or optional
+requires_login = true  
+
+# Secret key for generating user tokens
+login_jwt_secret = "123456789"
+
+# Include the domain in the cookie to ensure it's only sent to the intended domain
+login_cookie_domain = ""  # Set this to your domain in production
+
+[security]
+# Duration in seconds for the authentication token to expire
+token_expiry = 86400  # 24 hours
+
+[UI.theme]
+font_family = "DM Sans"

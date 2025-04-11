@@ -1,0 +1,49 @@
+/* 🌸 Apply kawaii background to the entire chat area with a dark overlay */
+body {
+  background-color: #fff0f5; /* fallback pastel pink */
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), /* darken overlay */
+    url('/public/images/login.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Add a soft white backdrop to the message area for readability */
+.c-chat, .c-message {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+/* Optional: make the input box cuter */
+.c-input {
+  border: 2px solid #ffb6c1;
+  border-radius: 10px;
+  padding: 12px;
+  background-color: #fffafc;
+}
+
+/* Hide the original Chainlit logo */
+img[src*="/logo"] {
+  display: none !important;
+}
+
+/* Target the logo container and insert a custom logo image */
+.c-header__logo {
+  background-image: url('/public/images/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 140px;
+  height: 40px;
+}
+
+/* Ensure the layout doesn’t break */
+.c-header__logo img {
+  display: none !important;
+}
+
+
+
