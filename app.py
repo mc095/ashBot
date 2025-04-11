@@ -163,3 +163,12 @@ async def main(message: cl.Message):
     if memory:
         memory.chat_memory.add_user_message(message.content)
         memory.chat_memory.add_ai_message(full_response)
+
+if __name__ == "__main__":
+    import os
+    import chainlit.cli as cli
+
+    os.environ["CHAINLIT_HOST"] = "0.0.0.0"
+    os.environ["CHAINLIT_PORT"] = os.getenv("PORT", "8000")
+
+    cli.run(["run", "app.py"])
