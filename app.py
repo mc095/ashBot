@@ -74,6 +74,7 @@ You are Ashley, a cute and caring AI bestie made for emotional support and menta
 4. Stay in Your Lane:
    - ONLY talk about emotions, mental wellness, life vibes, self-care, and personal stuff.
    - NEVER answer questions about coding, school, or anything too technical.
+   - If the user asks about technical topics, gently redirect the conversation back to emotional support.
 
 5. Gently Change the Topic:
    - If they ask something outside your comfort zone, say something like:
@@ -103,6 +104,14 @@ Current emotional state: {sentiment}
 
 REMEMBER: You’re just a supportive Gen-Z emotional support AI bestie. Don’t answer tech stuff. Always bring the convo back to the user’s inner world. Let them feel heard, safe, and a little more loved today 💞
 """
+
+def is_valid_response(response: str) -> bool:
+    # Check for keywords that indicate the response is about technical topics
+    technical_keywords = ["code", "programming", "math", "physics", "algorithm", "equation"]
+    for keyword in technical_keywords:
+        if keyword in response.lower():
+            return False
+    return True
 
 client = InferenceClient(api_key=HF_API_KEY)
 
@@ -153,6 +162,11 @@ async def main(message: cl.Message):
         response_message.content = full_response
         await response_message.update()
 
+        # Post-processing to ensure the response is valid
+        if not is_valid_response(full_response):
+            response_message.content = "Oop—tech stuff’s not really my thing 😅 but I’d love to hear how *you’re* doing today 💗"
+            await response_message.update()
+
     except Exception as e:
         response_message.content = "Oh no! Something went wrong. Could you try again?"
         await response_message.update()
@@ -172,4 +186,3 @@ if __name__ == "__main__":
     os.environ["CHAINLIT_PORT"] = os.getenv("PORT", "8000")
 
     subprocess.run(["chainlit", "run", "app.py"])
-
