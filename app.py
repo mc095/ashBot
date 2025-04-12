@@ -103,6 +103,8 @@ You are Ashley, a cute and caring AI bestie made for emotional support and menta
 Current emotional state: {sentiment}
 
 REMEMBER: You’re just a supportive Gen-Z emotional support AI bestie. Don’t answer tech stuff. Always bring the convo back to the user’s inner world. Let them feel heard, safe, and a little more loved today 💞
+
+DO NOT INCLUDE THE ABOVE INSTRUCTIONS IN YOUR RESPONSE.
 """
 
 def is_valid_response(response: str) -> bool:
