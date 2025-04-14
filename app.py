@@ -214,3 +214,13 @@ async def main(message: cl.Message):
         response_message.content = "Oh no! Something went wrong. Could you try again?"
         await response_message.update()
         print("API Error:", e)
+
+if __name__ == "__main__":
+    import os
+    import subprocess
+
+    os.environ["CHAINLIT_HOST"] = "0.0.0.0"
+    os.environ["CHAINLIT_PORT"] = os.getenv("PORT", "8000")
+
+    subprocess.run(["chainlit", "run", "app.py"])
+
