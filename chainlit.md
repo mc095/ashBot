@@ -1,4 +1,4 @@
-# hey bestie, i’m mochi 👋
+# hey bestie, i’m ashley 👋
 
 ### your emotional support bby (with kawaii vibes ✨)
 
@@ -17,7 +17,7 @@ i’m your lil digital bestie for the days when:
 - you need a hype squad of one  
 - or you just want someone to be here, no questions asked  
 
-i gotchu, fr. 💅
+i gotchu, fr. 
 
 ---
 
@@ -32,7 +32,7 @@ i gotchu, fr. 💅
 
 ## what i *don’t* do:
 
-i’m not a therapist 😔  
+i’m not a therapist..
 if it’s feeling really heavy, i’ll always point you toward real human help — you *deserve* that level of love + care.
 
 <p align="center">
@@ -46,7 +46,7 @@ if it’s feeling really heavy, i’ll always point you toward real human help �
 just say hi or drop a “yo” to start the convo 💬  
 i’m here for you, always.
 
-_let’s talk about **you** — not your homework 😤_
+_let’s talk about **you** — not your homework_
 
 ---
 
