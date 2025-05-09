@@ -150,7 +150,7 @@ async def set_starters():
     """Set conversation starter buttons for the chat interface."""
     return [
         cl.Starter(label="😔 I'm feeling down today", message="I'm feeling really down today..."),
-        cl.Starter(label="I need motivation", message="I've been procrastinating..."),
+        cl.Starter(label="🍵 I need motivation", message="I've been procrastinating..."),
         cl.Starter(label="✨ Celebrating a win", message="Something really good happened today..."),
         cl.Starter(label="😰 Feeling anxious", message="I've been feeling really anxious..."),
         cl.Starter(label="💖 Self-care ideas", message="I want to take better care of my mental health...")
