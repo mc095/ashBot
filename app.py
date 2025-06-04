@@ -180,7 +180,7 @@ async def main(message: cl.Message):
 
         # Use Groq's streaming API
         stream = client.chat.completions.create(
-            model="llama3-8b-8192",  # You can choose different models like "mixtral-8x7b" or others
+            model="llama-3.1-8b-instant",  # You can choose different models like "mixtral-8x7b" or others
             messages=messages,
             max_tokens=500,
             stream=True
